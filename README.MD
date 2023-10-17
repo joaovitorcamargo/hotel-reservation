@@ -1,3 +1,12 @@
+# Passo a Passo para executar o projeto
+
+- Copie renomeie o arquivo .env.example para .env
+- rode o comando docker-compose up -d
+- rode o comando npm i
+- rode o comando npx prisma migrate dev
+- no seu gerenciando de banco o postgres é executado na porta 5432 com o username e password "teste"
+- pronto para utilizar a aplicação
+
 # Link da Documentação
 
 - https://documenter.getpostman.com/view/10580830/2s9YR85Z4s
@@ -9,7 +18,11 @@ Hotel Reservation
 ## RFs Requisitos Funcionais
 
 - [] Deve ser possível cadastrar um Hotel
+- [] Deve ser possível editar um Hotel
+- [] Deve ser possível remover um Hotel
 - [] Deve ser possível cadastrar um usuário
+- [] Deve ser possível editar um usuário
+- [] Deve ser possível remover um usuário
 - [] Dever ser possível ver os dados de um usuário
 - [] Deve ser possível ver os dados de um Hotel
 - [] Deve ser possível obter o numero de vagas restantes daquele hotel
