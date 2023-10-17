@@ -1,7 +1,10 @@
 import fastify from "fastify";
 import { env } from "./env";
+import { routes } from "./app/routes";
 
 const app = fastify()
+
+app.register(routes)
 
 app.listen({
   host: '0.0.0.0',
