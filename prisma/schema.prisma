@@ -9,3 +9,44 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id         String   @id @default(uuid())
+  name       String
+  cpf        String   @unique
+  email      String   @unique
+  created_at DateTime @default(now())
+
+  reservations Reservation[]
+
+  @@map("users")
+}
+
+model Hotel {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  cnpj        String   @unique
+  email       String
+  latitude    Decimal
+  longitude   Decimal
+  created_at  DateTime @default(now())
+
+  reservations Reservation[]
+
+  @@map("hoteis")
+}
+
+model Reservation {
+  id         String   @id @default(uuid())
+  created_at DateTime @default(now())
+  start_date DateTime
+  end_date   DateTime
+
+  user     User   @relation(fields: [user_id], references: [id])
+  user_id  String
+  hotel    Hotel  @relation(fields: [hotel_id], references: [id])
+  hotel_id String
+
+  @@map("check_ins")
+}
