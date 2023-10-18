@@ -21,7 +21,7 @@ Hotel Reservation
 - [] Deve ser possível cadastrar um Hotel
 - [] Deve ser possível editar um Hotel
 - [] Deve ser possível remover um Hotel
-- [] Deve ser possível cadastrar um usuário
+- [x] Deve ser possível cadastrar um usuário
 - [] Deve ser possível editar um usuário
 - [] Deve ser possível remover um usuário
 - [] Deve ser possível ver os dados de um usuário
@@ -33,7 +33,7 @@ Hotel Reservation
 
 ## Regras de Negócio
 
-- [] O usuário não deve poder se cadastrar com um e-mail e cpf duplicado
+- [x] O usuário não deve poder se cadastrar com um e-mail e cpf duplicado
 - [] O usuário não pode reservar uma vaga no Hotel se já estiver com uma vaga vigente
 - [] Não será permitido o cadastro de pessoas em um hotel se o número de quartos forem esgotados
 - [] Não pode ser possível registrar 2 hotéis com o mesmo CNPJ
