@@ -50,4 +50,4 @@ Hotel Reservation
 - [] Adicionar decorators para validar as requests do controller
 
 ## ⚠️ Obs ⚠️
-- Para fins de forma para facilitar a execuão do teste irei colocar a execução do teste no momento da exeção do projeto com o seguinte comando "npm run dev"
+- Para fins de forma para facilitar a execução dos testes irei colocar a execução dos teste no momento de run do projeto com o seguinte comando "npm run dev"
