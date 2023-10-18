@@ -5,7 +5,7 @@ import { randomUUID } from "crypto";
 export class InMemoryUsersRepository implements UserRepository {
   public items: User[] = []
 
-  async findUserByEmailOrCpf(email: string, cpf: string) {
+  async findUserByEmailOrCpf(email?: string, cpf?: string) {
     const user = this.items.find(item => item.email === email || item.cpf === cpf)
 
     if(!user) {
@@ -38,4 +38,21 @@ export class InMemoryUsersRepository implements UserRepository {
 
     return user
   }
+
+  async updateUserData(data: Prisma.UserUpdateInput) {
+    const getIndexItem = this.items.findIndex(item => item.id === data.id)
+
+    if(getIndexItem < 0) {
+      return null
+    }
+    if(data.name) {
+      this.items[getIndexItem].name = data.name.toString()
+    }
+    if(data.email) {
+      this.items[getIndexItem].email = data.email.toString()
+    }
+
+    return this.items[getIndexItem]
+  }
+
 }

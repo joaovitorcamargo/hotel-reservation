@@ -21,15 +21,16 @@ Hotel Reservation
 - [] Deve ser possível cadastrar um Hotel
 - [] Deve ser possível editar um Hotel
 - [] Deve ser possível remover um Hotel
+- [] Deve ser possível ver os dados de um Hotel
 - [x] Deve ser possível cadastrar um usuário
 - [] Deve ser possível editar um usuário
 - [] Deve ser possível remover um usuário
-- [] Deve ser possível ver os dados de um usuário
-- [] Deve ser possível ver os dados de um Hotel
+- [x] Deve ser possível ver os dados de um usuário
 - [] Deve ser possível obter o número de vagas restantes daquele hotel
 - [] Deve ser possível obter os Hotéis que aquele usuário está inscrito
 - [] Deve ser possível buscar os Hotéis próximos
 - [] Deve ser possível pesquisar um Hotel pelo nome
+- [] Deve ser possível cadastrar um usuário a um Hotel
 
 ## Regras de Negócio
 
