@@ -1,4 +1,4 @@
-import { InMemoryUsersRepository } from "@/repositories/memory-repository/in-memory-user-repository";
+import { InMemoryUsersRepository } from "@/patterns/repositories/memory-repository/in-memory-user-repository";
 import { RegisterUserUseCase } from "../user/register-user";
 import { expect, describe, it, beforeEach } from 'vitest'
 import { UserAlreadyExists } from "../error/user-already-exists-error";

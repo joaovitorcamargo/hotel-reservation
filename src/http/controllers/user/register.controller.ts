@@ -1,5 +1,5 @@
-import { validateRegisterUser } from "@/decorators/validateRegisterUser";
-import { makeRegisterUserUseCase } from "@/factories/make-register-user-use-case";
+import { validateRegisterUser } from "@/patterns/decorators/validateRegisterUser";
+import { makeRegisterUserUseCase } from "@/patterns/factories/make-register-user-use-case";
 import { UserAlreadyExists } from "@/use-cases/error/user-already-exists-error";
 import { FastifyRequest, FastifyReply } from "fastify";
 
