@@ -1,10 +1,11 @@
 # Passo a Passo para executar o projeto
 
-- Copie renomeie o arquivo .env.example para .env
+- Copie e renomeie o arquivo .env.example para .env
 - rode o comando docker-compose up -d
 - rode o comando npm i
 - rode o comando npx prisma migrate dev
-- no seu gerenciando de banco o postgres é executado na porta 5432 com o username e password "teste"
+- no seu gerenciador de banco o PostgreSQL é executado na porta 5432 com o username e password "teste"
+- rode o comando npm run dev
 - pronto para utilizar a aplicação
 
 # Link da Documentação
@@ -15,7 +16,7 @@
 
 Hotel Reservation
 
-## RFs Requisitos Funcionais
+## Requisitos Funcionais
 
 - [] Deve ser possível cadastrar um Hotel
 - [] Deve ser possível editar um Hotel
@@ -23,16 +24,16 @@ Hotel Reservation
 - [] Deve ser possível cadastrar um usuário
 - [] Deve ser possível editar um usuário
 - [] Deve ser possível remover um usuário
-- [] Dever ser possível ver os dados de um usuário
+- [] Deve ser possível ver os dados de um usuário
 - [] Deve ser possível ver os dados de um Hotel
-- [] Deve ser possível obter o numero de vagas restantes daquele hotel
+- [] Deve ser possível obter o número de vagas restantes daquele hotel
 - [] Deve ser possível obter os Hotéis que aquele usuário está inscrito
 - [] Deve ser possível buscar os Hotéis próximos
 - [] Deve ser possível pesquisar um Hotel pelo nome
 
 ## Regras de Negócio
 
-- [] O usuário não deve pode se cadastrar com um e-mail duplicado
+- [] O usuário não deve poder se cadastrar com um e-mail e cpf duplicado
 - [] O usuário não pode reservar uma vaga no Hotel se já estiver com uma vaga vigente
 - [] Não será permitido o cadastro de pessoas em um hotel se o número de quartos forem esgotados
 - [] Não pode ser possível registrar 2 hotéis com o mesmo CNPJ
@@ -42,7 +43,10 @@ Hotel Reservation
 - [] O Id de cada registro na tabela deve ser um UUID
 - [] Os dados ficarão em um banco PostgreSQL
 - [] Todas listas de dados precisam estar paginadas com 20 itens por página
-- [] Para o Gerenciamento das regras de negócio utilizar respositorie
+- [] Para o Gerenciamento das regras de negócio utilizar respository
 - [] Para cada recurso da regra de neǵocio criar um use case
 - [] Para cada caso de uso realizar um teste unitário
 - [] Para a representação dos repositories nos testes utilizar um repository em memória
+
+## ⚠️ Obs ⚠️
+- Para fins de forma para facilitar a execuão do teste irei colocar a execução do teste no momento da exeção do projeto com o seguinte comando "npm run dev"
