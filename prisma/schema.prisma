@@ -28,6 +28,7 @@ model Hotel {
   description String?
   cnpj        String   @unique
   email       String
+  vacancies   Int
   latitude    Decimal
   longitude   Decimal
   created_at  DateTime @default(now())
