@@ -25,7 +25,7 @@ export class RegisterUserUseCase {
     email,
   }: RegisterUseCaseRequest): Promise<RegisterUseCaseResponse> {
 
-    const userAlreadyExists = await this.userRepository.findByEmail(email, cpf)
+    const userAlreadyExists = await this.userRepository.findUserByEmailOrCpf(email, cpf)
 
     if(userAlreadyExists) {
       throw new UserAlreadyExists()
