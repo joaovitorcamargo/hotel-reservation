@@ -47,6 +47,7 @@ Hotel Reservation
 - [] Para cada recurso da regra de neǵocio criar um use case
 - [] Para cada caso de uso realizar um teste unitário
 - [] Para a representação dos repositories nos testes utilizar um repository em memória
+- [] Adicionar decorators para validar as requests do controller
 
 ## ⚠️ Obs ⚠️
 - Para fins de forma para facilitar a execuão do teste irei colocar a execução do teste no momento da exeção do projeto com o seguinte comando "npm run dev"
