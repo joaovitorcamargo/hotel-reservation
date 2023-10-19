@@ -24,7 +24,7 @@ Hotel Reservation
 - [] Deve ser possível ver os dados de um Hotel
 - [x] Deve ser possível cadastrar um usuário
 - [x] Deve ser possível editar um usuário
-- [] Deve ser possível remover um usuário
+- [x] Deve ser possível remover um usuário
 - [x] Deve ser possível ver os dados de um usuário
 - [] Deve ser possível obter o número de vagas restantes daquele hotel
 - [] Deve ser possível obter os Hotéis que aquele usuário está inscrito

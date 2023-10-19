@@ -3,7 +3,7 @@ import { UpdateUserDataUseCase } from "@/use-cases/user/update-user-data";
 
 export function makeUpdateUserUseCase() {
   const userRepository = new PrismaUserRepository()
-  const registerUseCase = new UpdateUserDataUseCase(userRepository)
+  const updateUseCase = new UpdateUserDataUseCase(userRepository)
 
-  return registerUseCase
+  return updateUseCase
 }
