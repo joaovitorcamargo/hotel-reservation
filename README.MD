@@ -18,7 +18,7 @@ Hotel Reservation
 
 ## Requisitos Funcionais
 
-- [] Deve ser possível cadastrar um Hotel
+- [x] Deve ser possível cadastrar um Hotel
 - [] Deve ser possível editar um Hotel
 - [] Deve ser possível remover um Hotel
 - [] Deve ser possível ver os dados de um Hotel
@@ -37,7 +37,7 @@ Hotel Reservation
 - [x] O usuário não deve poder se cadastrar com um e-mail e cpf duplicado
 - [] O usuário não pode reservar uma vaga no Hotel se já estiver com uma vaga vigente
 - [] Não será permitido o cadastro de pessoas em um hotel se o número de quartos forem esgotados
-- [] Não pode ser possível registrar 2 hotéis com o mesmo CNPJ
+- [x] Não pode ser possível registrar 2 hotéis com o mesmo CNPJ
 
 ## Requisitos Não Funcionais
 
