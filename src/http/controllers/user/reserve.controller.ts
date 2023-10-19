@@ -3,6 +3,7 @@ import { makeReservationUseCase } from '@/patterns/factories/make-reservation-us
 import { UserNotFound } from '@/use-cases/error/user-not-found-error';
 import { HotelNotFound } from '@/use-cases/error/hotel-not-found-error';
 import { validateReserve } from '@/patterns/decorators/validateReserve';
+import { HotelHasNoVacancies } from '@/use-cases/error/hotel-has-no-vacancies-error';
 
 interface ReserveRequest {
   userId: string;
@@ -30,6 +31,11 @@ export class Reserve {
         });
       }
       if (error instanceof HotelNotFound) {
+        return reply.status(409).send({
+          message: error.message,
+        });
+      }
+      if (error instanceof HotelHasNoVacancies) {
         return reply.status(409).send({
           message: error.message,
         });

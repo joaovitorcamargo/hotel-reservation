@@ -4,6 +4,7 @@ import { HotelRepository } from '@/patterns/repositories/hotel-repository';
 import { HotelNotFound } from '../error/hotel-not-found-error';
 import { UserRepository } from '@/patterns/repositories/user-repository';
 import { UserNotFound } from '../error/user-not-found-error';
+import { HotelHasNoVacancies } from '../error/hotel-has-no-vacancies-error';
 
 interface ReserveUseCaseRequest {
   userId: string;
@@ -47,6 +48,18 @@ export class ReserveHotelUseCase {
 
     if (!userIsFounded) {
       throw new UserNotFound();
+    }
+
+    const totalVacanciesHotel =
+      await this.hotelRepository.getVacancies(hotelId);
+
+    const totalReservation =
+      await this.reservationRepository.getReservationByHotelId(hotelId);
+
+    const total = totalVacanciesHotel - totalReservation;
+
+    if (!total) {
+      throw new HotelHasNoVacancies();
     }
 
     const reservation = await this.reservationRepository.create({
