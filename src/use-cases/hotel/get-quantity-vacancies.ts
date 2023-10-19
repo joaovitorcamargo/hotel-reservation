@@ -31,8 +31,7 @@ export class GetQuantityVacanciesDataUseCase {
       throw new HotelNotFound();
     }
 
-    const totalVacanciesHotel =
-      await this.hotelRepository.getRemainingVacancies(id);
+    const totalVacanciesHotel = await this.hotelRepository.getVacancies(id);
 
     const totalReservation =
       await this.reservationRepository.getReservationByHotelId(id);

@@ -10,4 +10,14 @@ export class PrismaReservationRepository implements ReservationRepository {
 
     return reservation;
   }
+
+  async getReservationByHotelId(id: string): Promise<number> {
+    const result = await prisma.reservation.count({
+      where: {
+        hotel_id: id,
+      },
+    });
+
+    return result;
+  }
 }

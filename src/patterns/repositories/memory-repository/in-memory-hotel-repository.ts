@@ -43,7 +43,7 @@ export class InMemoryHotelRepository implements HotelRepository {
     return hotel;
   }
 
-  async getRemainingVacancies(id: string): Promise<number> {
+  async getVacancies(id: string): Promise<number> {
     const hotel = this.items.find((item) => item.id === id);
 
     return hotel?.vacancies || 0;

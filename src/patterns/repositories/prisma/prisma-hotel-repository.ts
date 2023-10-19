@@ -55,4 +55,14 @@ export class PrismaHotelRepository implements HotelRepository {
 
     return [hotel];
   }
+
+  async getVacancies(id: string): Promise<number> {
+    const hotel = await prisma.hotel.findUnique({
+      where: {
+        id,
+      },
+    });
+
+    return hotel?.vacancies ?? 0;
+  }
 }
