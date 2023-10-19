@@ -7,12 +7,14 @@ import { Register as RegisterHotel } from '../controllers/hotel/register.control
 import { Update as UpdateHotel } from '../controllers/hotel/update.controller';
 import { Delete as DeleteHotel } from '../controllers/hotel/delete.controller';
 import { GetData as GetDataHotel } from '../controllers/hotel/get-data.controller';
+import { Reserve } from '../controllers/user/reserve.controller';
 
 export async function routes(app: FastifyInstance): Promise<void> {
   app.get('/user/:id', GetData.run);
   app.post('/user', Register.run);
   app.patch('/user/:id', Update.run);
   app.delete('/user/:id', Delete.run);
+  app.post('/user/reserve-hotel', Reserve.run);
 
   app.get('/hotel/:id', GetDataHotel.run);
   app.post('/hotel', RegisterHotel.run);

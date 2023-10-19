@@ -4,7 +4,7 @@ import { prisma } from '@/client/prisma';
 
 export class PrismaUserRepository implements UserRepository {
   async create(data: Prisma.UserCreateInput): Promise<User> {
-    const user = prisma.user.create({
+    const user = await prisma.user.create({
       data,
     });
 
@@ -15,7 +15,7 @@ export class PrismaUserRepository implements UserRepository {
     email?: string,
     cpf?: string,
   ): Promise<User | null> {
-    const user = prisma.user.findFirst({
+    const user = await prisma.user.findFirst({
       where: {
         OR: [{ email }, { cpf }],
       },
@@ -25,9 +25,25 @@ export class PrismaUserRepository implements UserRepository {
   }
 
   async findUserById(id: string): Promise<User | null> {
-    const user = prisma.user.findUnique({
+    const user = await prisma.user.findUnique({
       where: {
         id,
+      },
+      include: {
+        reservations: {
+          select: {
+            start_date: true,
+            end_date: true,
+            hotel: {
+              select: {
+                name: true,
+                description: true,
+                email: true,
+                cnpj: true,
+              },
+            },
+          },
+        },
       },
     });
 

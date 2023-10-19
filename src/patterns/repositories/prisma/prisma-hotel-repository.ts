@@ -4,7 +4,7 @@ import { HotelRepository } from '../hotel-repository';
 
 export class PrismaHotelRepository implements HotelRepository {
   async create(data: Prisma.HotelCreateInput): Promise<Hotel> {
-    const hotel = prisma.hotel.create({
+    const hotel = await prisma.hotel.create({
       data,
     });
 
@@ -12,7 +12,7 @@ export class PrismaHotelRepository implements HotelRepository {
   }
 
   async findUserByCnpj(cnpj: string): Promise<Hotel | null> {
-    const hotel = prisma.hotel.findUnique({
+    const hotel = await prisma.hotel.findUnique({
       where: {
         cnpj,
       },
@@ -22,7 +22,7 @@ export class PrismaHotelRepository implements HotelRepository {
   }
 
   async findHotelById(id: string): Promise<Hotel | null> {
-    const hotel = prisma.hotel.findUnique({
+    const hotel = await prisma.hotel.findUnique({
       where: {
         id,
       },
