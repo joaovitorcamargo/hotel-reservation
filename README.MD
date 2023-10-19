@@ -42,7 +42,6 @@ Hotel Reservation
 
 - [x] O Id de cada registro na tabela deve ser um UUID
 - [x] Os dados ficarão em um banco PostgreSQL
-- [] Todas listas de dados precisam estar paginadas com 20 itens por página
 - [x] Para o Gerenciamento das regras de negócio utilizar respository
 - [x] Para cada recurso da regra de neǵocio criar um use case
 - [x] Para cada caso de uso realizar um teste unitário
