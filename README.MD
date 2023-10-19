@@ -41,14 +41,14 @@ Hotel Reservation
 
 ## Requisitos Não Funcionais
 
-- [] O Id de cada registro na tabela deve ser um UUID
-- [] Os dados ficarão em um banco PostgreSQL
+- [x] O Id de cada registro na tabela deve ser um UUID
+- [x] Os dados ficarão em um banco PostgreSQL
 - [] Todas listas de dados precisam estar paginadas com 20 itens por página
-- [] Para o Gerenciamento das regras de negócio utilizar respository
-- [] Para cada recurso da regra de neǵocio criar um use case
-- [] Para cada caso de uso realizar um teste unitário
-- [] Para a representação dos repositories nos testes utilizar um repository em memória
-- [] Adicionar decorators para validar as requests do controller
+- [x] Para o Gerenciamento das regras de negócio utilizar respository
+- [x] Para cada recurso da regra de neǵocio criar um use case
+- [x] Para cada caso de uso realizar um teste unitário
+- [x] Para a representação dos repositories nos testes utilizar um repository em memória
+- [x] Adicionar decorators para validar as requests do controller
 
 ## ⚠️ Obs ⚠️
 - Para fins de forma para facilitar a execução dos testes irei colocar a execução dos teste no momento de run do projeto com o seguinte comando "npm run dev"
