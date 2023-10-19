@@ -21,4 +21,10 @@ export class InMemoryReserveRepository implements ReservationRepository {
 
     return reservation;
   }
+
+  async getReservationByHotelId(id: string): Promise<number> {
+    const total = this.items.filter((item) => item.id === id);
+
+    return total ? total.length : 0;
+  }
 }

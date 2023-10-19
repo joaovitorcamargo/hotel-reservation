@@ -28,7 +28,6 @@ Hotel Reservation
 - [x] Deve ser possível ver os dados de um usuário
 - [] Deve ser possível obter o número de vagas restantes daquele hotel
 - [x] Deve ser possível obter os Hotéis que aquele usuário está inscrito
-- [] Deve ser possível buscar os Hotéis próximos
 - [x] Deve ser possível vincular um usuário a um Hotel
 
 ## Regras de Negócio

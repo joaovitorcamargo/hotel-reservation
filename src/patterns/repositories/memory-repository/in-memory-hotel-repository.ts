@@ -43,6 +43,12 @@ export class InMemoryHotelRepository implements HotelRepository {
     return hotel;
   }
 
+  async getRemainingVacancies(id: string): Promise<number> {
+    const hotel = this.items.find((item) => item.id === id);
+
+    return hotel?.vacancies || 0;
+  }
+
   async update(
     id: string,
     data: Prisma.HotelUpdateInput,
