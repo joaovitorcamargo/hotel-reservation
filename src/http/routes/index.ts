@@ -5,6 +5,7 @@ import { Update } from "../controllers/user/update.controller";
 import { Delete } from "../controllers/user/delete.controller";
 import { Register as RegisterHotel } from "../controllers/hotel/register.controller";
 import { Update as UpdateHotel } from "../controllers/hotel/update.controller";
+import { Delete as DeleteHotel } from "../controllers/hotel/delete.controller";
 
 export async function routes(app: FastifyInstance) {
     app.get('/user/:id', GetData.run)
@@ -14,4 +15,5 @@ export async function routes(app: FastifyInstance) {
 
     app.post('/hotel', RegisterHotel.run)
     app.patch('/hotel/:id', UpdateHotel.run)
+    app.delete('/hotel/:id', DeleteHotel.run)
 }

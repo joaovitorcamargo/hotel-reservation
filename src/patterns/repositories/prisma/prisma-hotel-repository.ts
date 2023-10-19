@@ -42,4 +42,14 @@ export class PrismaHotelRepository implements HotelRepository{
     return hotel
   }
 
+  async delete(id: string) {
+    const hotel =  await prisma.hotel.delete({
+       where: {
+         id
+       },
+     })
+ 
+     return [hotel]
+   }
+
 }

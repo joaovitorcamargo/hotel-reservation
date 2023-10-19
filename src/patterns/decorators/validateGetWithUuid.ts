@@ -5,7 +5,7 @@ const getDataBodySchema = z.object({
   id: z.string().uuid()
 });
 
-export function validateGetUser(_: any, __: string, descriptor: PropertyDescriptor) {
+export function validateGetWithUuid(_: any, __: string, descriptor: PropertyDescriptor) {
   const originalMethod = descriptor.value;
 
   descriptor.value = async function (request: FastifyRequest, reply: FastifyReply) {

@@ -1,4 +1,4 @@
-import { validateGetUser } from "@/patterns/decorators/validateGetUser";
+import { validateGetWithUuid } from "@/patterns/decorators/validateGetWithUuid";
 import { makeGetDataUserUserUseCase } from "@/patterns/factories/make-get-data-user-use-case";
 import { UserNotFound } from "@/use-cases/error/user-not-found-error";
 import { FastifyRequest, FastifyReply } from "fastify";
@@ -10,7 +10,7 @@ interface GetDataRequest {
 export class GetData {
   private static getDataUseCase = makeGetDataUserUserUseCase()
 
-  @validateGetUser
+  @validateGetWithUuid
   static async run(request: FastifyRequest<{ Params: GetDataRequest }>, reply: FastifyReply) { 
     try {
       const {user} = await GetData.getDataUseCase.execute(request.params)

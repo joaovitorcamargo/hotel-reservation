@@ -20,7 +20,7 @@ Hotel Reservation
 
 - [x] Deve ser possível cadastrar um Hotel
 - [x] Deve ser possível editar um Hotel
-- [] Deve ser possível remover um Hotel
+- [x] Deve ser possível remover um Hotel
 - [] Deve ser possível ver os dados de um Hotel
 - [x] Deve ser possível cadastrar um usuário
 - [x] Deve ser possível editar um usuário
