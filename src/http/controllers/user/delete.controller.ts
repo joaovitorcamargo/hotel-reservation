@@ -1,7 +1,7 @@
-import { validateGetWithUuid } from '@/patterns/decorators/validateGetWithUuid';
+import { validateGetWithUuid } from '@/decorators/validateGetWithUuid';
 import { UserNotFound } from '@/use-cases/error/user-not-found-error';
 import { FastifyRequest, FastifyReply } from 'fastify';
-import { makeDeleteUserUseCase } from '@/patterns/factories/make-delete-user-use-case';
+import { makeDeleteUserUseCase } from '@/factories/make-delete-user-use-case';
 
 interface DeleteUserRequest {
   id: string;

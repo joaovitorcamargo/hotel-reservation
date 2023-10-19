@@ -1,5 +1,5 @@
-import { validateGetWithUuid } from '@/patterns/decorators/validateGetWithUuid';
-import { makeGetDataUserUserUseCase } from '@/patterns/factories/make-get-data-user-use-case';
+import { validateGetWithUuid } from '@/decorators/validateGetWithUuid';
+import { makeGetDataUserUserUseCase } from '@/factories/make-get-data-user-use-case';
 import { UserNotFound } from '@/use-cases/error/user-not-found-error';
 import { FastifyRequest, FastifyReply } from 'fastify';
 

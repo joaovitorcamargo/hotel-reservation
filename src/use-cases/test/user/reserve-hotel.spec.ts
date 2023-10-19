@@ -1,8 +1,8 @@
 import { expect, describe, it, beforeEach } from 'vitest';
-import { InMemoryReserveRepository } from '@/patterns/repositories/memory-repository/in-memory-reserve-repository';
+import { InMemoryReserveRepository } from '@/repositories/memory-repository/in-memory-reserve-repository';
 import { ReserveHotelUseCase } from '@/use-cases/user/reserve-hotel';
-import { InMemoryHotelRepository } from '@/patterns/repositories/memory-repository/in-memory-hotel-repository';
-import { InMemoryUsersRepository } from '@/patterns/repositories/memory-repository/in-memory-user-repository';
+import { InMemoryHotelRepository } from '@/repositories/memory-repository/in-memory-hotel-repository';
+import { InMemoryUsersRepository } from '@/repositories/memory-repository/in-memory-user-repository';
 import { UserNotFound } from '@/use-cases/error/user-not-found-error';
 import { randomUUID } from 'crypto';
 import { HotelNotFound } from '@/use-cases/error/hotel-not-found-error';

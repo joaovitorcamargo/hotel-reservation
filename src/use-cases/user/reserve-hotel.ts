@@ -1,8 +1,8 @@
 import { Reservation } from '@prisma/client';
-import { ReservationRepository } from '@/patterns/repositories/reservation-repository';
-import { HotelRepository } from '@/patterns/repositories/hotel-repository';
+import { ReservationRepository } from '@/repositories/reservation-repository';
+import { HotelRepository } from '@/repositories/hotel-repository';
 import { HotelNotFound } from '../error/hotel-not-found-error';
-import { UserRepository } from '@/patterns/repositories/user-repository';
+import { UserRepository } from '@/repositories/user-repository';
 import { UserNotFound } from '../error/user-not-found-error';
 import { HotelHasNoVacancies } from '../error/hotel-has-no-vacancies-error';
 

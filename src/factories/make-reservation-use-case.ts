@@ -1,4 +1,4 @@
-import { PrismaUserRepository } from '@/patterns/repositories/prisma/prisma-user-repository';
+import { PrismaUserRepository } from '@/repositories/prisma/prisma-user-repository';
 import { ReserveHotelUseCase } from '@/use-cases/user/reserve-hotel';
 import { PrismaHotelRepository } from '../repositories/prisma/prisma-hotel-repository';
 import { PrismaReservationRepository } from '../repositories/prisma/prisma-reservation-repository';

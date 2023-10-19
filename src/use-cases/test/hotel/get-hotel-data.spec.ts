@@ -1,5 +1,5 @@
 import { expect, describe, it, beforeEach } from 'vitest';
-import { InMemoryHotelRepository } from '@/patterns/repositories/memory-repository/in-memory-hotel-repository';
+import { InMemoryHotelRepository } from '@/repositories/memory-repository/in-memory-hotel-repository';
 import { GetHotelDataUseCase } from '@/use-cases/hotel/get-hotel-data';
 import { HotelNotFound } from '@/use-cases/error/hotel-not-found-error';
 

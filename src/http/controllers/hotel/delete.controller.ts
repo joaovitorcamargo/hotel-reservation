@@ -1,6 +1,6 @@
-import { validateGetWithUuid } from '@/patterns/decorators/validateGetWithUuid';
+import { validateGetWithUuid } from '@/decorators/validateGetWithUuid';
 import { FastifyRequest, FastifyReply } from 'fastify';
-import { makeDeleteHotelUseCase } from '@/patterns/factories/make-delete-hotel-use-case';
+import { makeDeleteHotelUseCase } from '@/factories/make-delete-hotel-use-case';
 import { HotelNotFound } from '@/use-cases/error/hotel-not-found-error';
 
 interface DeleteUserRequest {

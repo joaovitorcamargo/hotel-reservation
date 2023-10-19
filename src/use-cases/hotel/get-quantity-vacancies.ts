@@ -1,6 +1,6 @@
-import { HotelRepository } from '@/patterns/repositories/hotel-repository';
+import { HotelRepository } from '@/repositories/hotel-repository';
 import { HotelNotFound } from '../error/hotel-not-found-error';
-import { ReservationRepository } from '@/patterns/repositories/reservation-repository';
+import { ReservationRepository } from '@/repositories/reservation-repository';
 
 interface GetQuantityVacanciesRequest {
   id: string;

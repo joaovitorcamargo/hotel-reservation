@@ -1,8 +1,8 @@
 import { expect, describe, it, beforeEach } from 'vitest';
-import { InMemoryHotelRepository } from '@/patterns/repositories/memory-repository/in-memory-hotel-repository';
+import { InMemoryHotelRepository } from '@/repositories/memory-repository/in-memory-hotel-repository';
 import { HotelNotFound } from '@/use-cases/error/hotel-not-found-error';
 import { GetQuantityVacanciesDataUseCase } from '@/use-cases/hotel/get-quantity-vacancies';
-import { InMemoryReserveRepository } from '@/patterns/repositories/memory-repository/in-memory-reserve-repository';
+import { InMemoryReserveRepository } from '@/repositories/memory-repository/in-memory-reserve-repository';
 
 let hotelRepository: InMemoryHotelRepository;
 let reservationRepository: InMemoryReserveRepository;

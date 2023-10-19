@@ -1,6 +1,6 @@
 import { expect, describe, it, beforeEach } from 'vitest';
 import { UpdateHotelDataUseCase } from '@/use-cases/hotel/update-hotel-data';
-import { InMemoryHotelRepository } from '@/patterns/repositories/memory-repository/in-memory-hotel-repository';
+import { InMemoryHotelRepository } from '@/repositories/memory-repository/in-memory-hotel-repository';
 import { HotelNotFound } from '@/use-cases/error/hotel-not-found-error';
 
 let hotelRepository: InMemoryHotelRepository;

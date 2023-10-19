@@ -1,4 +1,4 @@
-import { InMemoryUsersRepository } from '@/patterns/repositories/memory-repository/in-memory-user-repository';
+import { InMemoryUsersRepository } from '@/repositories/memory-repository/in-memory-user-repository';
 import { expect, describe, it, beforeEach } from 'vitest';
 import { UserNotFound } from '../../error/user-not-found-error';
 import { DeleteUserUseCase } from '../../user/delete-user';

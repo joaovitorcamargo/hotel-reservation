@@ -1,5 +1,5 @@
-import { validateUpdateHotel } from '@/patterns/decorators/validateUpdateHotel';
-import { makeUpdateHotelUseCase } from '@/patterns/factories/make-update-hotel-use-case';
+import { validateUpdateHotel } from '@/decorators/validateUpdateHotel';
+import { makeUpdateHotelUseCase } from '@/factories/make-update-hotel-use-case';
 import { HotelNotFound } from '@/use-cases/error/hotel-not-found-error';
 import { FastifyRequest, FastifyReply } from 'fastify';
 

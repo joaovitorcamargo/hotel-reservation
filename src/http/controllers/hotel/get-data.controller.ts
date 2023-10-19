@@ -1,5 +1,5 @@
-import { validateGetWithUuid } from '@/patterns/decorators/validateGetWithUuid';
-import { makeGetDataHotelUseCase } from '@/patterns/factories/make-get-data-hotel-use-case';
+import { validateGetWithUuid } from '@/decorators/validateGetWithUuid';
+import { makeGetDataHotelUseCase } from '@/factories/make-get-data-hotel-use-case';
 import { HotelNotFound } from '@/use-cases/error/hotel-not-found-error';
 import { FastifyRequest, FastifyReply } from 'fastify';
 

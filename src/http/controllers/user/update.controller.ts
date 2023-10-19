@@ -1,5 +1,5 @@
-import { validateUpdateUser } from '@/patterns/decorators/validateUpdateUser';
-import { makeUpdateUserUseCase } from '@/patterns/factories/make-update-user-use-case';
+import { validateUpdateUser } from '@/decorators/validateUpdateUser';
+import { makeUpdateUserUseCase } from '@/factories/make-update-user-use-case';
 import { UserAlreadyExists } from '@/use-cases/error/user-already-exists-error';
 import { UserNotFound } from '@/use-cases/error/user-not-found-error';
 import { FastifyRequest, FastifyReply } from 'fastify';

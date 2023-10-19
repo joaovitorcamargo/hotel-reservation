@@ -1,5 +1,5 @@
-import { validateRegisterHotel } from '@/patterns/decorators/validateRegisterHotel';
-import { makeRegisterHotelUseCase } from '@/patterns/factories/make-register-hotel-use-case';
+import { validateRegisterHotel } from '@/decorators/validateRegisterHotel';
+import { makeRegisterHotelUseCase } from '@/factories/make-register-hotel-use-case';
 import { HotelAlreadyExists } from '@/use-cases/error/hotel-already-exists-error';
 import { FastifyRequest, FastifyReply } from 'fastify';
 

@@ -1,5 +1,5 @@
 import { Hotel } from '@prisma/client';
-import { HotelRepository } from '@/patterns/repositories/hotel-repository';
+import { HotelRepository } from '@/repositories/hotel-repository';
 import { HotelAlreadyExists } from '../error/hotel-already-exists-error';
 
 interface RegisterHotelCaseRequest {

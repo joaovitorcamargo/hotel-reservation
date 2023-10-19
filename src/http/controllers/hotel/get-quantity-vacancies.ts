@@ -1,7 +1,7 @@
-import { validateGetWithUuid } from '@/patterns/decorators/validateGetWithUuid';
+import { validateGetWithUuid } from '@/decorators/validateGetWithUuid';
 import { HotelNotFound } from '@/use-cases/error/hotel-not-found-error';
 import { FastifyRequest, FastifyReply } from 'fastify';
-import { makeGetQuantityVacanciesUseCase } from '@/patterns/factories/make-get-quantity-vacancies-use-case';
+import { makeGetQuantityVacanciesUseCase } from '@/factories/make-get-quantity-vacancies-use-case';
 
 interface GetQuantityVacanciesRequest {
   id: string;

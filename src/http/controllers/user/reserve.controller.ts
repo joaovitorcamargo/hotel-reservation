@@ -1,8 +1,8 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
-import { makeReservationUseCase } from '@/patterns/factories/make-reservation-use-case';
+import { makeReservationUseCase } from '@/factories/make-reservation-use-case';
 import { UserNotFound } from '@/use-cases/error/user-not-found-error';
 import { HotelNotFound } from '@/use-cases/error/hotel-not-found-error';
-import { validateReserve } from '@/patterns/decorators/validateReserve';
+import { validateReserve } from '@/decorators/validateReserve';
 import { HotelHasNoVacancies } from '@/use-cases/error/hotel-has-no-vacancies-error';
 
 interface ReserveRequest {

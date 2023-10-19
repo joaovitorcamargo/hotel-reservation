@@ -1,4 +1,4 @@
-import { UserRepository } from '@/patterns/repositories/user-repository';
+import { UserRepository } from '@/repositories/user-repository';
 import { User } from '@prisma/client';
 import { UserNotFound } from '../error/user-not-found-error';
 

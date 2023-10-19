@@ -1,6 +1,6 @@
 import { Hotel } from '@prisma/client';
 import { HotelNotFound } from '../error/hotel-not-found-error';
-import { HotelRepository } from '@/patterns/repositories/hotel-repository';
+import { HotelRepository } from '@/repositories/hotel-repository';
 
 interface UpdateHotelDataUseCaseRequest {
   id: string;
