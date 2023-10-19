@@ -1,8 +1,8 @@
 import { InMemoryUsersRepository } from "@/patterns/repositories/memory-repository/in-memory-user-repository";
 import { expect, describe, it, beforeEach } from 'vitest'
-import { UserAlreadyExists } from "../error/user-already-exists-error";
-import { UpdateUserDataUseCase } from "../user/update-user-data";
-import { UserNotFound } from "../error/user-not-found-error";
+import { UserAlreadyExists } from "../../error/user-already-exists-error";
+import { UpdateUserDataUseCase } from "../../user/update-user-data";
+import { UserNotFound } from "../../error/user-not-found-error";
 
 
 let userRepository: InMemoryUsersRepository

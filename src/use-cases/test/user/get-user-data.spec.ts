@@ -1,7 +1,7 @@
 import { InMemoryUsersRepository } from "@/patterns/repositories/memory-repository/in-memory-user-repository";
 import { expect, describe, it, beforeEach } from 'vitest'
-import { GetUserDataUseCase } from "../user/get-user-data";
-import { UserNotFound } from "../error/user-not-found-error";
+import { GetUserDataUseCase } from "../../user/get-user-data";
+import { UserNotFound } from "../../error/user-not-found-error";
 
 let userRepository: InMemoryUsersRepository
 let sut: GetUserDataUseCase
