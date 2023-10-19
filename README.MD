@@ -34,7 +34,6 @@ Hotel Reservation
 ## Regras de Negócio
 
 - [x] O usuário não deve poder se cadastrar com um e-mail e cpf duplicado
-- [] O usuário não pode reservar uma vaga no Hotel se já estiver com uma vaga vigente
 - [] Não será permitido o cadastro de pessoas em um hotel se o número de quartos forem esgotados
 - [x] Não pode ser possível registrar 2 hotéis com o mesmo CNPJ
 
