@@ -1,11 +1,11 @@
-import { Prisma, Hotel } from "@prisma/client";
-import { randomUUID } from "crypto";
-import { HotelRepository } from "../hotel-repository";
+import { Prisma, Hotel } from '@prisma/client';
+import { randomUUID } from 'crypto';
+import { HotelRepository } from '../hotel-repository';
 
 export class InMemoryHotelRepository implements HotelRepository {
-  public items: Hotel[] = []
+  public items: Hotel[] = [];
 
-  async create(data: Prisma.HotelCreateInput) {
+  async create(data: Prisma.HotelCreateInput): Promise<Hotel> {
     const hotel = {
       id: randomUUID(),
       name: data.name,
@@ -15,55 +15,58 @@ export class InMemoryHotelRepository implements HotelRepository {
       vacancies: data.vacancies,
       latitude: new Prisma.Decimal(data.latitude.toString()),
       longitude: new Prisma.Decimal(data.longitude.toString()),
-      created_at: new Date()
-    }
-    
-    this.items.push(hotel)
+      created_at: new Date(),
+    };
 
-    return hotel
+    this.items.push(hotel);
+
+    return hotel;
   }
 
-  async findUserByCnpj(cnpj: string) {
-    const hotel = this.items.find(item => item.cnpj === cnpj)
+  async findUserByCnpj(cnpj: string): Promise<Hotel | null> {
+    const hotel = this.items.find((item) => item.cnpj === cnpj);
 
-    if(!hotel) {
-      return null
+    if (!hotel) {
+      return null;
     }
 
-    return hotel
+    return hotel;
   }
 
-  async findHotelById(id: string) {
-    const hotel = this.items.find(item => item.id === id)
+  async findHotelById(id: string): Promise<Hotel | null> {
+    const hotel = this.items.find((item) => item.id === id);
 
-    if(!hotel) {
-      return null
+    if (!hotel) {
+      return null;
     }
-    
-    return hotel
+
+    return hotel;
   }
 
-  async update(id: string, data: Prisma.HotelUpdateInput) {
-    const getIndexItem = this.items.findIndex(item => item.id === id)
+  async update(
+    id: string,
+    data: Prisma.HotelUpdateInput,
+  ): Promise<Hotel | null> {
+    const getIndexItem = this.items.findIndex((item) => item.id === id);
 
-    if(getIndexItem < 0) {
-      return null
+    if (getIndexItem < 0) {
+      return null;
     }
-    if(data.name) {
-      this.items[getIndexItem].name = data.name.toString()
+    if (data.name) {
+      this.items[getIndexItem].name = data.name.toString();
     }
-    if(data.email) {
-      this.items[getIndexItem].email = data.email.toString()
+    if (data.email) {
+      this.items[getIndexItem].email = data.email.toString();
     }
-    if(data.description) {
-      this.items[getIndexItem].description = data.description.toString()
+    if (data.description) {
+      this.items[getIndexItem].description = data.description.toString();
     }
 
-    return this.items[getIndexItem]
+    return this.items[getIndexItem];
   }
-  async delete(id:string) {
-    const hotels = this.items.filter(item => item.id != id)
+  async delete(id: string): Promise<Hotel[]> {
+    const hotels = this.items.filter((item) => item.id != id);
 
-    return hotels
+    return hotels;
   }
 }

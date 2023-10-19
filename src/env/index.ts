@@ -1,14 +1,14 @@
-import 'dotenv/config'
-import {z} from 'zod'
+import 'dotenv/config';
+import { z } from 'zod';
 
 const envconfig = z.object({
-  RUN_PORT: z.coerce.number().default(8000)
-})
+  RUN_PORT: z.coerce.number().default(8000),
+});
 
-const currentEnv = envconfig.safeParse(envconfig)
+const currentEnv = envconfig.safeParse(envconfig);
 
-if(currentEnv.success === false){
-  throw new Error('Invalid Env')
+if (currentEnv.success === false) {
+  throw new Error('Invalid Env');
 }
 
-export const env = currentEnv.data
+export const env = currentEnv.data;

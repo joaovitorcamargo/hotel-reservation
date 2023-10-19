@@ -1,33 +1,31 @@
-import { Hotel } from "@prisma/client"
-import { HotelRepository } from "@/patterns/repositories/hotel-repository"
-import { HotelNotFound } from "../error/hotel-not-found-error"
+import { Hotel } from '@prisma/client';
+import { HotelRepository } from '@/patterns/repositories/hotel-repository';
+import { HotelNotFound } from '../error/hotel-not-found-error';
 
 interface GetHotelDataRequest {
-  id: string
+  id: string;
 }
 
 interface GetHotelDataResponse {
-  hotel: Hotel
+  hotel: Hotel;
 }
 
 export class GetHotelDataUseCase {
-  private hotelRepository: HotelRepository
+  private hotelRepository: HotelRepository;
 
   constructor(hotelRepository: HotelRepository) {
-    this.hotelRepository = hotelRepository
+    this.hotelRepository = hotelRepository;
   }
 
-  async execute({id}: GetHotelDataRequest): Promise<GetHotelDataResponse> {
+  async execute({ id }: GetHotelDataRequest): Promise<GetHotelDataResponse> {
+    const hotel = await this.hotelRepository.findHotelById(id);
 
-    const hotel = await this.hotelRepository.findHotelById(id)
-    
-    if(!hotel) {
-      throw new HotelNotFound()
+    if (!hotel) {
+      throw new HotelNotFound();
     }
 
     return {
       hotel,
-    }
+    };
   }
-  
 }
