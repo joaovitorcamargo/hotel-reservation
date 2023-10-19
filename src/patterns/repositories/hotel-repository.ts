@@ -5,4 +5,5 @@ export interface HotelRepository {
   findUserByCnpj(cnpj: string): Promise<Hotel|null>
   findHotelById(id: string): Promise<Hotel|null>
   update(id: string, data: Prisma.HotelUncheckedUpdateInput): Promise<Hotel|null>
+  delete(id: string): Promise<Hotel[]>
 }

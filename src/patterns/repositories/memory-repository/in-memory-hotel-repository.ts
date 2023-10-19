@@ -61,4 +61,9 @@ export class InMemoryHotelRepository implements HotelRepository {
 
     return this.items[getIndexItem]
   }
+  async delete(id:string) {
+    const hotels = this.items.filter(item => item.id != id)
+
+    return hotels
+  }
 }
