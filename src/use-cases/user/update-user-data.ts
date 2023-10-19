@@ -29,7 +29,7 @@ export class UpdateUserDataUseCase {
       throw new UserNotFound()
     }
 
-    const user = await this.userRepository.updateUserData(data.id, data)
+    const user = await this.userRepository.update(data.id, data)
 
     return user
   }
