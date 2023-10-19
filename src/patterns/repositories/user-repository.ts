@@ -5,4 +5,5 @@ export interface UserRepository {
   findUserById(id: string): Promise<User|null>
   findUserByEmailOrCpf(email?: string, cpf?: string): Promise<User|null>
   updateUserData(id: string, data: Prisma.UserUncheckedUpdateInput): Promise<User|null>
+  delete(id: string): Promise<User[]>
 }
