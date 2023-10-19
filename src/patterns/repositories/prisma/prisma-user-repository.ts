@@ -62,6 +62,10 @@ export class PrismaUserRepository implements UserRepository {
   }
 
   async delete(id: string): Promise<User[]> {
+    await prisma.reservation.deleteMany({
+      where: { user_id: id },
+    });
+
     const user = await prisma.user.delete({
       where: {
         id,

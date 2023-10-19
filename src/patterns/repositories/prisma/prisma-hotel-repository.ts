@@ -43,6 +43,10 @@ export class PrismaHotelRepository implements HotelRepository {
   }
 
   async delete(id: string): Promise<Hotel[]> {
+    await prisma.reservation.deleteMany({
+      where: { hotel_id: id },
+    });
+
     const hotel = await prisma.hotel.delete({
       where: {
         id,
