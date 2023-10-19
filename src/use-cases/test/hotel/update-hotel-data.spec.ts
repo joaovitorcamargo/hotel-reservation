@@ -6,7 +6,7 @@ import { HotelNotFound } from '@/use-cases/error/hotel-not-found-error';
 let hotelRepository: InMemoryHotelRepository
 let sut: UpdateHotelDataUseCase
 
-describe('Update User Data Use Case', () => {
+describe('Update Hotel Data Use Case', () => {
   beforeEach(() => {
     hotelRepository = new InMemoryHotelRepository()
     sut = new UpdateHotelDataUseCase(hotelRepository)
