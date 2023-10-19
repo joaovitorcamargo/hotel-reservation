@@ -19,7 +19,7 @@ Hotel Reservation
 ## Requisitos Funcionais
 
 - [x] Deve ser possível cadastrar um Hotel
-- [] Deve ser possível editar um Hotel
+- [x] Deve ser possível editar um Hotel
 - [] Deve ser possível remover um Hotel
 - [] Deve ser possível ver os dados de um Hotel
 - [x] Deve ser possível cadastrar um usuário

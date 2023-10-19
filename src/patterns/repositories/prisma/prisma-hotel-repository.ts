@@ -21,4 +21,25 @@ export class PrismaHotelRepository implements HotelRepository{
   return hotel
   }
 
+  async findHotelById(id: string) {
+    const hotel = prisma.hotel.findUnique({
+      where: {
+        id
+      }
+    })
+
+    return hotel
+  }
+
+  async update(id: string, data: Prisma.HotelUpdateInput) {
+    const hotel = await prisma.hotel.update({
+      where: {
+        id
+      },
+      data
+    })
+
+    return hotel
+  }
+
 }
