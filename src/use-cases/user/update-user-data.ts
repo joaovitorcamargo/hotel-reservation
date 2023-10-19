@@ -23,11 +23,13 @@ export class UpdateUserDataUseCase {
       throw new UserAlreadyExists()
     }
 
-    const user = await this.userRepository.updateUserData(data)
+    const userIsFounded = await this.userRepository.findUserById(data.id)    
 
-    if(!user) {
+    if(!userIsFounded) {
       throw new UserNotFound()
     }
+
+    const user = await this.userRepository.updateUserData(data.id, data)
 
     return user
   }
