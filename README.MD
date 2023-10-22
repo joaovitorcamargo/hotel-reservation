@@ -5,6 +5,7 @@
 - rode o comando npm i
 - rode o comando npx prisma migrate dev
 - no seu gerenciador de banco o PostgreSQL é executado na porta 5432 com o username e password "teste"
+- renomeie a .env.example para .env
 - rode o comando npm run dev
 - pronto para utilizar a aplicação
 
